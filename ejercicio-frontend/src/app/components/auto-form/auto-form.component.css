@@ -1,4 +1,3 @@
-/* auto-form.component.css */
 .container {
     max-width: 400px;
     margin: 20px auto;
@@ -22,7 +21,6 @@
     margin-bottom: 20px;
   }
   
-  /* Ajusta el ancho del label para hacerlo más uniforme con el campo de entrada */
   .form-group label {
     width: 100px;
     display: inline-block;

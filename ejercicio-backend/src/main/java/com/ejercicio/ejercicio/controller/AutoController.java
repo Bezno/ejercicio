@@ -80,11 +80,9 @@ public class AutoController {
 
     private DayOfWeek obtenerDiaSemana(String fecha) {
         try {
-            // Intenta parsear la fecha y obtener el día de la semana
             System.out.println(fecha);
             return LocalDate.parse(fecha).getDayOfWeek();
         } catch (DateTimeParseException e) {
-            // Manejar la excepción si la fecha no es válida
             throw new IllegalArgumentException("Formato de fecha no válido: " + fecha);
         }
     }
@@ -92,10 +90,8 @@ public class AutoController {
     private LocalTime obtenerHora(String hora) {
         try {
             System.out.println(hora);
-            // Intenta parsear la hora
             return LocalTime.parse(hora);
         } catch (DateTimeParseException e) {
-            // Manejar la excepción si la hora no es válida
             throw new IllegalArgumentException("Formato de hora no válido: " + hora);
         }
     }

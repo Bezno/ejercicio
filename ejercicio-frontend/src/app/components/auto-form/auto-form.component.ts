@@ -29,7 +29,6 @@ export class AutoFormComponent {
           .subscribe(response => {
             console.log('Auto registrado con éxito:', response);
             this.gotoIndex();
-            // Puedes hacer algo más después de registrar el auto, como limpiar el formulario o redirigir.
           }, error => {
             console.error('Error al registrar el auto:', error);
           });

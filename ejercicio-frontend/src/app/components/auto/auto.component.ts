@@ -29,9 +29,8 @@ export class AutoComponent implements OnInit {
             this.notFound = true;
           } else {
             console.error('Error en la solicitud:', error);
-            // Puedes manejar otros tipos de errores aquí.
           }
-          return throwError(error); // Reenvía el error para que otros también lo manejen
+          return throwError(error);
         })
       )
       .subscribe((response) => {
