@@ -1,0 +1,43 @@
+<div class="container" [ngClass]="{ 'notFound' : notFound }">
+    <div class="card">
+      <div class="mensaje">
+      <div class="circulacion" [ngClass]="{'circula' : puedeCircular===true, 'notFound' : puedeCircular===false}">Puede circular</div>
+      <div class="circulacion" [ngClass]="{'no-circula' : puedeCircular===false, 'notFound' : puedeCircular===true}">No puede circular</div>
+    </div>
+      <div class="card-body">
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>Placa</th>
+              <th>Tipo</th>
+              <th>Color</th>
+              <th>Modelo</th>
+              <th>Cilindraje</th>
+              <th>Chasis</th>
+              <th>Fabricante</th>
+              <th>Año</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ datos.auto?.placa?.toUpperCase() }}</td>
+              <td>{{ datos.auto?.tipo?.toUpperCase() }}</td>
+              <td>{{ datos.auto?.color?.toUpperCase() }}</td>
+              <td>{{ datos.auto?.modelo?.toUpperCase() }}</td>
+              <td>{{ datos.auto?.cilindraje?.toUpperCase() }}</td>
+              <td>{{ datos.auto?.chasis?.toUpperCase() }}</td>
+              <td>{{ datos.auto?.fabricante?.toUpperCase() }}</td>
+              <td>{{ datos.auto?.anio?.toUpperCase() }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+  
+  <div class="container" [ngClass]="{ 'notFound' : !notFound }">
+    <div class="card">
+      <div class="card-body">
+        Auto no encontrado
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <button routerLink="/add" class="btn btn-primary">Registrar auto</button>
+    </div>
+    <div class="card-body">
+      <div>
+        <input
+          class="buscar"
+          type="text"
+          id="search"
+          name="search"
+          minlength="7"
+          maxlength="7"
+          [(ngModel)]="search"
+          class="form-control"
+          pattern="[a-zA-Z]{3}\d{4}"
+          (input)="search = search.toUpperCase()"
+          [ngClass]="{ 'is-empty': isSearchEmpty }"
+          placeholder="abc1234"
+          required
+        />
+      </div>
+      <div>
+        <label for="fecha">
+          <input
+            type="datetime-local"
+            name="fecha"
+            id="fecha"
+            [(ngModel)]="fecha"
+            required
+          />
+        </label>
+      </div>
+      <button class="btn btn-primary"  (click)="validarFechaActual()">
+        Consultar circulación
+      </button>
+    </div>
+    <div *ngIf="notFound" mat-dialog-content>No se a encontrado el auto.</div>
+  </div>
+</div>

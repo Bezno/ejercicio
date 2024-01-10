@@ -1,0 +1,40 @@
+.container {
+    margin: 20px;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+  }
+  
+  .card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: large;
+  }
+
+  input{
+    display: block;
+    padding: 4px;
+    height: 30px;
+    font-size: large;
+  }
+
+  .is-empty{
+    background-color: rgba(243, 99, 99, 0.678);
+  }
